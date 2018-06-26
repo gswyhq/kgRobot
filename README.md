@@ -14,6 +14,10 @@ gswyhq@gswyhq-PC:~/docker/jena-fuseki$ docker run --name jena_3030_tdb_drug_new 
 ## 启动程序：
 gswyhq@gswyhq-PC:~/github_projects/kgRobot/code/KGQA$ docker run -i -t --detach --name=kg_robot_18000 -p 18000:8000 --volume=$PWD:/kg_robot --workdir=/kg_robot -v /etc/localtime:/etc/localtime ubuntu /bin/bash
 
+gswyhq@gswyhq-PC:/$ docker cp /usr/share/zoneinfo/Asia kg_robot_18000:/usr/share/zoneinfo/Asia
+
+gswyhq@gswyhq-PC:/$ docker cp /usr/share/zoneinfo/PRC kg_robot_18000:/usr/share/zoneinfo/Asia/Shanghai
+
 gswyhq@gswyhq-PC:~/github_projects/kgRobot/code/KGQA$ docker exec -it kg_robot_18000 /bin/bash
 
 root@89318fb9634b:/kg_robot# pip3 install -r requirements.txt -i https://pypi.douban.com/simple
