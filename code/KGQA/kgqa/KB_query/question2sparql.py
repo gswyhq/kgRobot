@@ -40,7 +40,7 @@ class Question2Sparql:
             return sorted_dict[0][1]
 
 if __name__ == '__main__':
-    q2s = Question2Sparql(['./external_dict/jibing_pos_name.txt', './external_dict/drug_pos_name.txt','./external_dict/symptom_pos.txt'])
+    q2s = Question2Sparql(['./dict/jibing_pos_name.txt', './dict/drug_pos_name.txt','./dict/symptom_pos.txt'])
     #question = '喉插管损伤有什么症状？'
     #question = '马来酸罗格列酮片的批准文号是什么?'
     #question = '怎么预防不完全性肠梗阻?'

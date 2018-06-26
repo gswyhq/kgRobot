@@ -31,7 +31,7 @@ class Tagger:
 
 # TODO 用于测试
 if __name__ == '__main__':
-    tagger = Tagger(['./external_dict/jibing_name.txt', './external_dict/drug_name.txt'])
+    tagger = Tagger(['./dict/jibing_name.txt', './dict/drug_name.txt'])
     #while True:
     s = '喉插管损伤需要什么药治疗？'
     for i in tagger.get_word_objects(s):

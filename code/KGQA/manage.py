@@ -13,3 +13,6 @@ if __name__ == "__main__":
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+# root@89318fb9634b:/kg_robot# python3 manage.py runserver 0.0.0.0:8000
+# http://127.0.0.1:18000/kgqa

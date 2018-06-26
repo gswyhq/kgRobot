@@ -103,9 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+
+LANGUAGE_CODE = 'zh-Hans'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -136,6 +139,10 @@ from kgqa.KB_query import question2sparql
 # TODO 连接Fuseki服务器。
 fuseki = jena_sparql_endpoint.JenaFuseki()
 # TODO 初始化自然语言到SPARQL查询的模块，参数是外部词典列表。
-q2s = question2sparql.Question2Sparql(['E:/kgqa/code/KGQA/kgqa/KB_query/dict/jibing_pos_name.txt',
-                                       'E:/kgqa/code/KGQA/kgqa/KB_query/dict/drug_pos_name.txt',
-                                       'E:/kgqa/code/KGQA/kgqa/KB_query/dict/symptom_pos.txt'])
+# q2s = question2sparql.Question2Sparql(['E:/kgqa/code/KGQA/kgqa/KB_query/dict/jibing_pos_name.txt',
+#                                        'E:/kgqa/code/KGQA/kgqa/KB_query/dict/drug_pos_name.txt',
+#                                        'E:/kgqa/code/KGQA/kgqa/KB_query/dict/symptom_pos.txt'])
+
+q2s = question2sparql.Question2Sparql(['./kgqa/KB_query/dict/jibing_pos_name.txt',
+                                       './kgqa/KB_query/dict/drug_pos_name.txt',
+                                       './kgqa/KB_query/dict/symptom_pos.txt'])

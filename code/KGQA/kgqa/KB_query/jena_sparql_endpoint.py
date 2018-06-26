@@ -13,8 +13,11 @@ from collections import OrderedDict
 
 
 class JenaFuseki:
-    def __init__(self, endpoint_url='http://localhost:3030/kgdrug/query'):
+    # def __init__(self, endpoint_url='http://localhost:3030/kgdrug/query'):
+    def __init__(self, endpoint_url='http://192.168.3.145:3030/tdb_drug_new/query'):
+    # def __init__(self, endpoint_url='http://192.168.3.145:3030/tdb/query'):
         self.sparql_conn = SPARQLWrapper(endpoint_url)
+        self.sparql_conn.setCredentials('admin', '123456')
 
     def get_sparql_result(self, query):
         self.sparql_conn.setQuery(query)
